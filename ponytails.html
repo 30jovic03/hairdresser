@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image" href="./src/icon.jpg" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Caca</title>
+  <script src="index.js"></script>
+</head>
+<body>
+  <div id="page">
+    <header id="masthead">
+      <nav id="navBar" class="topnav">
+        <a href="index.html">Home</a>
+        <a href="braids.html">Braids</a>
+        <a href="buns.html">Buns</a>
+        <a href="ponytails.html" class="active">Ponytails</a>
+        <a href="casual.html">Casual</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+      </nav>
+    </header>
+    <div id="main">
+      <div class="sidenavbtn">
+        <span onclick="openNav()">&#9776;</span>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" style="padding-bottom: 30px;">Home</a>
+        <a href="braids.html">Braids</a>
+        <a href="buns.html">Buns</a>
+        <a href="ponytails.html">Ponytails</a>
+        <a href="casual.html">Casual</a>
+      </div>
+      <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+      </div>
+      <div id="container">
+        <div class="secondpage">
+          <script>
+              function displayImages() {
+                  for (var i = 1; i < 7; i++) {
+                    document.write('<img src="./src/ponytails/'+i+'.jpg" class="secondpageimg" />');
+                  }
+              }
+              displayImages();
+          </script>
+        </div>
+        <p style="text-align:center; padding-bottom: 70px;">More images are coming soon... :)</p>
+        <footer>
+          <div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="braids.html">Braids</a></li>
+              <li><a href="buns.html">Buns</a></li>
+              <li><a href="ponytails.html">Ponytails</a></li>
+              <li><a href="casual.html">Casual</a></li>
+            </ul>
+          </div>
+          <span>mavis 2020</span>
+        </footer>  
+      </div>
+    </div>
+</body>
+</html>

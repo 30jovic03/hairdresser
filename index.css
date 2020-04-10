@@ -1,0 +1,616 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: 'Merienda', sans-serif;
+  font-weight: 700;
+  color: rgb(88, 0, 129);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+#page {
+  background-image: url(./src/scissors.jpg);
+  font-family:  sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/*---header-----------------*/
+
+#masthead {
+  background-color: #2c2c2c;
+}
+
+.topnav {
+  max-width: 70vw;
+  margin-left: 14.5vw;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(119, 21, 189);
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*---side-nav-bar-----------*/
+
+.sidenavbtn {
+  position: fixed;
+  top: 0px;
+  left: 5%;
+  height: 53px;
+  width: 53px;
+  font-size:37px;
+  text-align: center;
+  background-color: #2c2c2c;
+  color: rgb(182, 34, 250);
+  cursor:pointer;
+  border-radius: 50%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2c2c2c;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 90px;
+}
+
+.sidenav a {
+  padding: 8px 8px 0px 22px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #999999;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*---social-bar-------------*/
+
+.icon-bar {
+  position: fixed;
+  top: 55%;
+  right: 5%;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.icon-bar a:hover {
+  background-color: #555555;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.instagram {
+  background: #125688;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/*---main-content-----------*/
+
+#container {
+  max-width: 70vw;
+  border-left: 6px double #2c2c2c;
+  border-right: 6px double #2c2c2c;
+  width: 100%;
+  margin: 0 auto;
+  background: rgb(200, 130, 250);
+}
+
+/*---home----------------*/
+
+#home {
+  height: 95vh;
+  width: 100%;
+  background-image: url(./src/tools.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.purpleimg {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  top: 8vw;
+  right: 5vw;
+  object-fit: cover;
+  filter: invert(17%) sepia(87%) saturate(7446%) hue-rotate(282deg) brightness(61%) contrast(111%);}
+
+.titletext {
+  position: absolute;
+  top: 23vw;
+  right: 3vw;
+}
+
+.titletext p {
+  font-weight: 700;
+  font-size: 2.3rem;
+  text-align: center;
+  color: rgb(100, 0, 146);
+
+}
+
+/*---explore-----------*/
+
+.explore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 8% 0 8%;
+}
+
+.hairstyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%  / 4);
+  height: 14vw;
+  margin: 3%;
+  transition: transform .6s;
+}
+
+.exploreimg {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.exploreimg img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.exploreimg:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hairstyle:hover h3 {
+  color: rgb(77, 77, 77);
+}
+
+#explore p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*---latest---------*/
+
+.latest {
+  position: relative;
+  width: 96%;
+  height: 110vw;
+  margin: auto;
+}
+
+.latestimg {
+  width: 30vw;
+  height: 40vw;
+  border: 3px solid ivory;
+  margin: 5% 2%;
+  object-fit: cover;
+}
+
+.latestleft {
+  float: left;
+}
+
+.latestright {
+  float: right;
+  position: relative;
+  top: 23vw;
+}
+
+/*---about-------------*/
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 55vw;
+  margin: auto;
+}
+
+.me {
+  position: absolute;
+  width: 20vw;
+  height: 28vw;
+  border-right: 30px solid rgb(200, 130, 250);
+  border-bottom: 30px solid rgb(200, 130, 250);
+  top: 4vw;
+  left: 6vw;
+  object-fit: cover;
+  z-index: 5;
+}
+
+.salon {
+  position: absolute;
+  width: 50vw;
+  height: 30vw;
+  top: 25vw;
+  left: 13vw;
+  object-fit: cover;
+  z-index: 4;
+}
+
+.perfecthair {
+  position: absolute;
+  width: 35vw;
+  height: 20vw;
+  top: 7vw;
+  left: 30vw;
+  margin-right: 5%;
+  font-size: 2rem;
+}
+
+.perfecthair span {
+  color: #016c96;
+}
+
+/*---contact-------------*/
+
+.contact {
+  position: relative;
+  margin-top: 50px;
+  left: 5%;
+  width: 90%;
+  height: 450px;
+  color: rgb(100, 0, 146);
+}
+
+.contact-left {
+  background-color: #bbbbbb;
+  float: left;
+  width: 370px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  border-radius: 20%;
+}
+
+.contact-right {
+  background-color: #bbbbbb;
+  float: right;
+  width: 370px;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.contact a {
+  color: rgb(100, 0, 146);
+}
+
+.contact p {
+  padding: 5px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: left;
+  width: 90px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.right-tab {
+  display: inline-block;
+  text-align: left;
+  width: 200px;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 25px;
+  width: 250px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #3b3b3b;
+  border-radius: 2px;
+}
+
+#submit {
+  float: right;
+  background-color: rgb(200, 130, 250);
+  border-radius: 4px;
+  color: rgb(100, 0, 146);
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+/*---footer-----------*/
+
+footer {
+  background-color: #bbbbbb;
+}
+
+footer div {
+  margin-left: 200px;
+  display: inline-block;
+  height: 160px;
+  width: 150px;
+  padding: 20px;
+}
+
+footer a {
+  color: #222222;
+}
+
+footer a:hover {
+  color: #555555;
+}
+
+footer > span {
+  margin-right: 100px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/*---second-page--------------*/
+
+.secondpage {
+  width: 95%;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.secondpageimg {
+  width: 30vw;
+  height: 40vw;
+  border: 3px solid ivory;
+  margin: 5% 1.8%;
+  object-fit: cover;
+}
+
+/*---media-------------*/
+
+@media screen and (max-width: 850px) {
+  #container {
+    max-width: 85vw;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .topnav {
+    max-width: 85vw;
+    margin-left: 6vw;
+  }
+  .sidenavbtn {
+    display: none;
+  }
+  .icon-bar {
+    right: 0px;
+  }
+  .icon-bar a {
+    border-radius: 0;
+  }
+  .purpleimg {
+    display: none;
+  }
+  .titletext {
+    top: 220px;
+    right: 20px;
+  }
+  .titletext p {
+    font-size: 1.7rem;
+  }
+  .exploreimg img {
+    height: 110px;
+  }
+  .hairstyle {
+    height: 18vw;
+  }
+  .hairstyle h3 {
+    font-size: 20px;
+  }
+  .latest {
+    height: 120vw;
+  }  
+  .latestimg {
+    width: 36vw;
+    height: 45vw;
+  }
+  .perfecthair {
+    width: 50vw;
+    font-size: 1rem;
+  }
+  .salon {
+    width: 60vw;
+  }
+  .contact {
+    height: 500px;
+  }
+  .secondpageimg {
+    width: 60vw;
+    height: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    max-width: 100vw;
+    border: none;
+  }
+  .topnav {
+    max-width: 100vw;
+    margin-left: 0px;
+  }
+  .topnav a {
+    float: right;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .sidenavbtn {
+    display: none;
+  }
+  .icon-bar {
+    display: none;
+  }
+  .exploreimg img {
+    height: 90px;
+  }
+  .hairstyle h3 {
+    font-size: 14px;
+  }
+  .latest {
+    height: 150vw;
+  }  
+  .latestimg {
+    width: 42vw;
+    height: 53vw;
+  }
+  .latestright {
+    top: 27vw;
+  }
+  .about {
+    height: 70vw;
+  }
+  .me {
+    width: 30vw;
+    height: 40vw;
+  }
+  .perfecthair {
+    left: 40vw;
+    width: 50vw;
+    font-size: 0.8rem;
+  }
+  .salon {
+    top: 37vw;
+    width: 75vw;
+    height: 35vw;
+  }
+}
